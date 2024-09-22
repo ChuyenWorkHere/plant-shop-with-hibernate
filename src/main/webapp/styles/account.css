@@ -1,0 +1,283 @@
+@charset "ISO-8859-1";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F9F9F9;
+}
+/* || Header */
+@media (min-width: 973px) {
+    .header-container {
+        background-color: white;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+    }
+}
+@media (max-width: 972px) {
+    .header-container {
+        background-color: white;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+    }
+}
+
+/* || Login part */
+.login-container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+.my-account {
+    color: #2b2f38;
+}
+.login-title {
+    color: #2b2f38;
+    font-weight: 500;
+}
+@media (min-width: 676px) {
+    .login-container {
+        gap: 1.25em;
+        margin: 5% 6%;
+    }
+    .my-account {
+        font-size: 2em;
+        padding: 1.2em 7% 0 7%;
+    }
+    .login-title {
+        font-size: 2.2em;
+        padding: 0 7%;
+    }
+}
+@media (max-width: 676px) {
+    .login-container {
+        gap: 1.25em;
+        margin: 1% 2%;  
+    }
+    .my-account {
+        font-size: 1.3em;
+        color: #2b2f38;
+        padding: 1em 7% 0 7%;
+    }
+    .login-title {
+        font-size: 1.6em;
+        color: #2b2f38;
+        padding: 0 7%;
+    }
+}
+.login-form-container {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    margin: 0 7% 7% 7%;
+}
+.label-login {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.user-name, .password, .remember-me, .login-nav {
+    margin-left: 1.25em;
+    margin-right: 1.25em;
+    margin-top: 0.6em;
+}
+.user-name label, .password label, .remember-me label {
+    font-size: 0.85em;
+    font-weight: 600;
+    color: #5d6167;
+    margin-top: 1em;
+}
+.user-name input, .password input {
+    padding: .4em 0;
+    font-size: 1.1em;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    outline: none;
+}
+.user-name input:focus, .password input:focus {
+    border: 1px dotted rgba(0, 0, 0, 0.15);
+}
+.login-nav button {
+	font-family: inherit;
+    background-color: #fc5f5f;
+    border: none;
+    padding: 0.8em 1.9em;
+    border-radius: 1.5em;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 0.7em;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+.login-nav button:hover {
+    background-color: #75C32C;
+}
+.login-nav a {
+    display: block;
+    text-decoration: none;
+    font-size: 0.85em;
+    color: black;
+    margin-top: 0.6em;
+    margin-bottom: 2.5em;
+    transition: color 0.4s;
+}
+.login-nav a:hover {
+    color: #75C32C;
+}
+ /* || Bill */
+.profile-container {
+	background-color: white;
+    display: grid;
+	gap: 2em;
+}
+.profile-container .profile-avt {
+	width : 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	gap: 1rem;
+}
+.profile-container .profile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.profile-container .profile h4 {
+	color: #575757;
+	font-size: 1.4em;
+	font-weight: 600;
+}
+.profile-container .profile span {
+	color: #2b2f38;
+	font-size: .8em;
+	font-weight: 600;
+}
+.profile-container h4 {
+	font-size: 1.2em;
+	font-family: inherit;
+	font-weight: 400;
+	color: #2b2f38;
+}
+.profile-container form div {
+	margin: .5em 0 .5em 0
+}
+.profile-container .input-user {
+	display: flex;
+	flex-direction: column;
+	gap: .3em;
+}
+
+.profile-container .input-user label {
+	color: #575757;
+	font-size: .85em;
+	font-weight: 600;
+}
+
+.input-user label span {
+	color: red;
+}
+
+.profile-container .input-user input, textarea {
+	padding: .6em .5em;
+	width: 100%;
+	font-size: 1em;
+	border: 1px solid rgba(0, 0, 0, .16);
+	outline: none;
+}
+
+.address input {
+	margin-top: .5em;
+}
+
+.name-user {
+	display: flex;
+	gap: 1em;
+}
+
+.name-user div {
+	flex: 1;
+}
+
+.profile-container .input-user textarea {
+	font-family: inherit;
+}
+
+.profile-container .input-user input:focus {
+	border: 1px dotted rgba(0, 0, 0, .16);
+}
+.profile-container button {
+	font-family: inherit;
+    background-color: #fc5f5f;
+    border: none;
+    padding: 0.8em 1.9em;
+    margin-top: 2em;
+    border-radius: 1.5em;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 0.8em;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+.profile-container button:hover {
+    background-color: #75C32C;
+}
+@media (min-width: 676px) {
+    .profile-container {
+        margin: 5% 6%;
+        padding: 5% 7%;
+        grid-template-columns : 1fr 3fr;
+    }
+    .profile-container .profile-avt {
+    	border-right: 1px solid rgba(0,0,0,0.15);
+    }
+    .profile-container .profile-avt img {
+		width : 70%;
+		height: auto;
+		border: 5px double #2F4F4F;
+		border-radius: 50%;
+	}
+	.profile-container .profile h4 {
+		font-size: 1.3em;
+	}
+	.profile-container .profile span {
+		font-size: .8em;
+	}
+    .profile-container .profile-title {
+    	font-size: 2em;
+        color: #2b2f38;
+    }
+}
+@media (max-width: 676px) {
+	.profile-container {
+        margin: 1% 2%;
+        padding: 5% 7%;
+        grid-template-columns : 1fr;
+    }
+    .profile-container .profile-avt {
+    	padding-bottom: 1em;
+    	border-bottom: 1px solid rgba(0,0,0,0.15);
+    }
+    .profile-container .profile-avt img {
+		width : 40%;
+		height: auto;
+		border: 5px double #2F4F4F;
+		border-radius: 50%;
+	}
+	.profile-container .profile h4 {
+		font-size: 1em;
+	}
+	.profile-container .profile span {
+		font-size: .7em;
+	}
+	.profile-container .profile-title {
+    	font-size: 1.3em;
+        color: #2b2f38;
+    }
+    .profile-container .name-user {
+		flex-direction: column;
+	}
+}

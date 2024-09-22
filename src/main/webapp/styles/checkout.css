@@ -1,0 +1,332 @@
+@charset "ISO-8859-1";
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background-color: #F9F9F9;
+}
+
+/* || Header */
+@media ( min-width : 973px) {
+	.header-container {
+		background-color: white;
+		border: 1px solid rgba(0, 0, 0, 0.15);
+	}
+}
+
+@media ( max-width : 972px) {
+	.header-container {
+		background-color: white;
+		border: 1px solid rgba(0, 0, 0, 0.15);
+	}
+}
+
+.header-container #cart-1, .header-container #cart-2 {
+	pointer-events: none;
+}
+
+.header-container .store-link .option-container {
+	z-index: 1;
+	box-shadow: 0 4px 10px -2px rgba(0, 0, 0, .1);
+}
+
+.header-container .navigate-link-part {
+	z-index: 101;
+}
+/* || Checkout */
+main {
+	background-color: #F9F9F9;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 4% 4%;
+}
+
+.container {
+	width: 100%;
+	max-width: 1240px;
+	background-color: white;
+	padding: 4% 8%;
+}
+
+.container h3 {
+	font-family: inherit;
+	font-size: 2em;
+	font-weight: 400;
+	color: #2b2f38;
+	margin-bottom: .5em;
+}
+
+.container .coupon-container {
+	position: relative;
+}
+
+.container .coupon-container .coupon-suggest {
+	background-color: #F9F9F9;
+	display: flex;
+	gap: 1em;
+	padding: 1em 2em;
+	border-top: 3px solid black;
+	color: #2b2f38;
+}
+
+.coupon-container .coupon-suggest button {
+	border: none;
+	background-color: inherit;
+	font-size: inherit;
+	color: inherit;
+	cursor: pointer;
+	transition: all .3s;
+}
+
+.coupon-container .coupon-suggest button:hover {
+	color: #75C32C;
+}
+
+.coupon-container .coupon-input-user {
+	margin-top: 1.5em;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	color: #5b5c62;
+	font-size: .9em;
+	position: absolute;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 1s;
+}
+
+.coupon-container .coupon-input-user div {
+	display: flex;
+	gap: 1em;
+}
+
+.coupon-input-user div input {
+	padding: .5em .7em;
+	border: 1px solid rgba(0, 0, 0, .15);
+	font-size: inherit;
+	font-family: inherit;
+	outline: none;
+}
+
+.coupon-input-user div input:focus {
+	border: 1px dotted rgba(0, 0, 0, .15);
+}
+
+.coupon-input-user div button {
+	border: none;
+	background-color: #FC5F5F;
+	color: white;
+	font-size: .7em;
+	font-family: inherit;
+	font-weight: 600;
+	letter-spacing: 1px;
+	border-radius: 2em;
+	padding: 0 1em;
+	cursor: pointer;
+	transition: all .3s;
+}
+
+.coupon-input-user div button:hover {
+	background-color: #75C32C;
+}
+
+/* || Bill */
+.container .order-container {
+	margin-top: 3em;
+	display: grid;
+	grid-template-columns: 3fr 2fr;
+	gap: 4%;
+	transform: translateY(0);
+	transition: all 1s;
+}
+
+.container .order-container .bill-container {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+.container .order-container h4 {
+	font-size: 1.2em;
+	font-family: inherit;
+	font-weight: 700;
+	color: #2b2f38;
+}
+
+.container .bill-container h4 {
+	padding: .4em 0;
+	border-bottom: 1px solid rgba(0, 0, 0, .16);
+}
+
+.container .order-container .input-user {
+	display: flex;
+	flex-direction: column;
+	gap: .3em;
+}
+
+.order-container .input-user label {
+	color: #575757;
+	font-size: .85em;
+	font-weight: 600;
+}
+
+.input-user label span {
+	color: red;
+}
+
+.order-container .input-user input, textarea {
+	padding: .6em .5em;
+	width: 100%;
+	font-size: 1em;
+	border: 1px solid rgba(0, 0, 0, .16);
+	outline: none;
+}
+
+.address input {
+	margin-top: .5em;
+}
+
+.name-user {
+	display: flex;
+	gap: 1em;
+}
+
+.name-user div {
+	flex: 1;
+}
+
+.order-container .input-user textarea {
+	font-family: inherit;
+}
+
+.order-container .input-user input:focus {
+	border: 1px dotted rgba(0, 0, 0, .16);
+}
+/* || Order detail */
+.order-detail {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border: 2px solid #5d616781;
+	padding: 2em 2em;
+	position: relative;
+}
+
+.order-detail table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.order-detail th, .order-detail tr, .order-detail td {
+	color: #5D6167;
+	border-bottom: 1px solid rgba(0, 0, 0, .16);
+	padding: 1em 0;
+	text-align: justify;
+	vertical-align: middle;
+}
+
+thead th:nth-child(2), tr td:nth-child(2) {
+	text-align: right;
+}
+
+.order-detail thead th {
+	color: #2b2f38;
+	font-weight: 600;
+}
+
+tr td {
+	font-size: .9em;
+}
+
+tr td:first-child {
+	color: #2b2f38;
+	font-weight: 500;
+}
+
+.order-detail .payment-method {
+	bottom: 1.5em;
+	gap: 1em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+}
+
+.payment-method .method {
+	color: #5D6167;
+	font-size: .9em;
+	width: 100%;
+}
+
+.payment-method .method .payment-notice {
+	background-color: #EFEFEF;
+	padding: .7em 1em;
+	width: 100%;
+}
+
+.method span {
+	display: inline-block;
+	width: 0em;
+	height: 0em;
+	border-left: .8em solid transparent;
+	border-right: .8em solid transparent;
+	border-bottom: 1em solid #EFEFEF;
+	margin-top: -5px;
+	margin-bottom: -5px;
+	margin-left: 1em;
+}
+
+.order-detail .payment-method button {
+	border: none;
+	background-color: #FC5F5F;
+	padding: .8em 0;
+	font-family: inherit;
+	font-size: .8em;
+	color: white;
+	font-weight: 500;
+	letter-spacing: 1px;
+	border-radius: 1.8em;
+	cursor: pointer;
+	width: 100%;
+	transition: all .3s;
+}
+
+.order-detail .payment-method button:hover {
+	background-color: #75C32C;
+}
+
+@media screen and (max-width: 1240px) and (min-width: 926px) {
+	.container {
+		padding: 3% 3%;
+	}
+	.container .order-container {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (max-width: 926px) and (min-width: 545px) {
+	.container {
+		padding: 3% 3%;
+	}
+	.container .order-container {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (max-width: 545px) {
+	.container {
+		padding: 3% 3%;
+	}
+	.container .order-container {
+		grid-template-columns: 1fr;
+	}
+	.bill-container .name-user {
+		flex-direction: column;
+	}
+}

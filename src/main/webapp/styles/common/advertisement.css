@@ -1,0 +1,80 @@
+@charset "ISO-8859-1";
+
+
+.advertisement-part-container {
+    background-image: url("../../images/CTA-bg.jpg");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10% 10% 30% 10%;
+}
+.advertisement-title {
+    display: block;
+    font-size: 2.5em;
+    font-weight: 500;
+    color: #2b2f38;
+    line-height: 1.3em;
+    margin: 0 20% 1em 20%;
+    text-align: center;
+}
+.advertisement-content {
+    font-size: 0.9em;
+    color: #5b5c62;
+    line-height: 1.3em;
+    margin: 0 15% 2em 15%;
+    text-align: center;
+}
+.go-to-shop-btn {
+    background-color: #fc5f5f;
+    border: none;
+    padding: 1em 2.2em;
+    border-radius: 2.2em;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: inherit;
+    font-size: 0.8em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+@media (max-width: 1031px) and (min-width: 676px){
+    .advertisement-title {
+        margin: 0 15% 1em 15%;
+        text-align: center;
+        font-size: 2em;
+    }
+    .advertisement-content {
+        font-size: 0.7em;
+        margin: 0 10% 2em 10%;
+    }
+    .go-to-shop-btn {
+        padding: 0.8em 1.7em;
+        border-radius: 2.2em;
+        font-size: 0.7em;
+    }
+}  
+@media (max-width: 676px){
+    .advertisement-title {
+        margin: 0 10% 1em 10%;
+        text-align: center;
+        font-size: 1.6em;
+    }
+    .advertisement-content {
+        font-size: 0.7em;
+        margin: 0 5% 2em 5%;
+    }
+    .go-to-shop-btn {
+        padding: 0.6em 1.5em;
+        border-radius: 2em;
+        font-size: 0.6em;
+    }
+}
+
+.go-to-shop-btn:hover {
+    background-color: #75C32C;
+}

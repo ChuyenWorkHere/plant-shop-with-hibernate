@@ -1,0 +1,182 @@
+@charset "ISO-8859-1";
+/* || Cart and Checkout */
+.wrapper {
+    position: fixed;
+    background-color: black;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .5;
+    transition: opacity .3s;
+    display: none;
+    z-index: 101;
+}
+.shopping-container {
+    position: fixed;
+    top: 0;
+    right: -5000px;
+    bottom: 0;
+    background-color: white;
+    width: 35%;
+    transition: right .3s;
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.shopping-container .shopping-cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 4%;
+    border-top: 1px solid rgba(0, 0, 0, .16);
+    border-bottom: 1px solid rgba(0, 0, 0, .16);
+}
+.shopping-container .shopping-cart h4 {
+    font-size: 1em;
+    font-weight: 500;
+    color: #2b2f38;
+    filter: blur(.3px);
+}
+.shopping-container .shopping-cart span {
+    font-size: 1.8em;
+    cursor: pointer;
+    color: #2b2f38;
+    filter: blur(.4px);
+}
+.product-wrapper .plant-cart {
+    display: flex;
+    flex-direction: row;
+    padding: .5rem 4%;
+    gap: 1em;
+    align-items: center;
+}
+.product-wrapper .plant-cart .info-cart-wrapper{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.info-cart-wrapper .name {
+    font-size: .9em;
+    font-family: inherit;
+    text-decoration: none;
+    font-weight: 500;
+    color: #2b2f38;
+    filter: blur(.3px);
+}
+.info-cart-wrapper .price {
+    font-size: 1em;
+    font-family: inherit;
+    color: #5D6167;
+    filter: blur(.3px);
+    margin-top: .3em;
+}
+.info-cart-wrapper a.remove {
+    font-size: 1em;
+    color: rgba(0, 0, 0, .35);
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, .35);
+    padding: 0 .4em;
+    border-radius: 50%;
+    text-decoration: none;
+}
+.product-wrapper img {
+    width: 3.5rem;
+    height: 3.5rem;
+    object-fit: center;
+    object-position: center;
+    cursor: pointer;
+}
+
+.shopping-container .no-product, .no-login {
+    font-size: .9em;
+    font-family: inherit;
+    text-decoration: none;
+    text-align: center;
+    color: #5e5f61;
+    filter: blur(.3px);
+    flex: 1;
+}
+
+.shopping-container .navigate-button-cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
+    border-top: 1px solid rgba(0,0,0,0.3);
+}
+.navigate-button-cart .price {
+    padding: 3% 4%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, .15);
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
+}
+.navigate-button-cart .price span:first-child {
+    font-weight: 500;
+    filter: blur(.4px);
+    font-family: inherit;
+    color: #2b2f38;
+}
+.navigate-button-cart .price span:last-child {
+    filter: blur(.3px);
+    font-family: inherit;
+    color: #5d6167;
+}
+.navigate-button-cart .btn {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0;
+}
+.navigate-button-cart .btn a {
+    font-family: inherit;
+    font-size: .8em;
+    font-weight: 500;
+    filter: blur(.4px);
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border: none;
+    background-color: #FC5F5F;
+    width: 90%;
+    padding: .8em 0;
+    text-align: center;
+    border-radius: 1.9em;
+    transition: all .3s;
+}
+.navigate-button-cart .btn a:hover {
+    background-color: #75C32C;
+}
+
+@media screen and (min-width: 1240px) {
+    .shopping-container {
+        width: 35%;
+    }
+}
+@media screen and (min-width: 926px) and (max-width: 1240px) {
+    .shopping-container {
+        width: 50%;
+    }
+}
+@media screen and (min-width: 545px) and (max-width: 926px) {
+    .shopping-container {
+        width: 75%;
+    }
+}
+@media screen and (max-width: 545px) {
+    .shopping-container {
+        width: 100%;
+    }
+}

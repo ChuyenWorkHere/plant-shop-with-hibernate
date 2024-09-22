@@ -1,0 +1,77 @@
+@charset "ISO-8859-1";
+
+/* || Need help part*/
+@media (min-width: 767px){
+    .need-help-container {
+        display: flex;
+        flex-direction: row;
+        padding-left: 9%;
+        padding-right: 9%;
+        padding-top: 2em;
+        padding-bottom: 4em;
+        gap: 5em;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+}
+@media (max-width: 767px){
+    .need-help-container {
+        display: flex;
+        flex-direction: column;
+        padding-left: 3%;
+        padding-right: 6%;
+        padding-bottom: 5em;
+        gap: 2em;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+}
+.need-help-contact {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4em;
+    justify-content: start;
+}
+
+.need-help-message {
+    flex: 2;
+    text-align: justify;
+    line-height: 1.6em;
+}
+
+.need-help-call {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: start;
+    align-items: center;
+}
+
+.need-help-recommend {
+    font-size: 1.4em;
+    font-weight: 500;
+    color: #2b2f38;
+}
+
+.need-help-call i {
+    font-size: 0.7em;
+    color: #FC5F5F;
+}
+
+.need-help-call p {
+    font-size: 0.7em;
+    color: #FC5F5F;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.text-message-1,
+.text-message-2 {
+    font-size: 0.875em;
+    color: #5b5c62;
+}
+
+.text-message-1 {
+    margin-bottom: 1em;
+}
+
+/* || End need help part*/
