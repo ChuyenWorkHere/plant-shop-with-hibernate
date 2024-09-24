@@ -49,7 +49,6 @@ public class CouponController extends HttpServlet {
 		if(coupon != null ) {
 			
 		}
-		 
 		
 	}
 
