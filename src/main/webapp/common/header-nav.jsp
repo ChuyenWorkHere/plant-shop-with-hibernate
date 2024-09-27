@@ -37,9 +37,12 @@
 	<!--Start header navigate bar-->
 	<div class="navigate-bar">
 		<div class="container-lg-name-page">
+		<a href="home" style="text-decoration: none; display: flex; align-items: center;" >
 			<img src="images/plants-store-logo-green.svg" alt=""
 				class="logo-page">
-			<div class="name-page">Simply Natural</div>
+			<span class="name-page">Simply Natural</span>
+		</a>
+			
 		</div>
 		<div class="menu-navigate-link">
 			<div class="menu-navigate">

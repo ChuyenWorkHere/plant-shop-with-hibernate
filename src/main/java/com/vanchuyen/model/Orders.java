@@ -1,5 +1,6 @@
 package com.vanchuyen.model;
 
+import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -35,6 +36,9 @@ public class Orders {
 	
 	@Column(name = "Company")
 	private String company;
+	
+	@Column(name = "OrderDate")
+	private LocalDate orderDate;
 	
 	@Column(name = "Country")
 	private String country;
@@ -73,7 +77,7 @@ public class Orders {
 	}
 
 	public Orders(String fName, String lName, String company, String country, String city, String address, String phone,
-			String email, String note, String status, Users user, Set<Product> products) {
+			String email, String note, String status, Users user, Set<Product> products, LocalDate orderDate) {
 		super();
 		this.fName = fName;
 		this.lName = lName;
@@ -87,6 +91,7 @@ public class Orders {
 		this.status = status;
 		this.user = user;
 		this.products = products;
+		this.orderDate = orderDate;
 	}
 
 	public Orders(String orderID, String fName, String lName, String company, String country, String city,
@@ -210,4 +215,21 @@ public class Orders {
 	public void setProducts(Set<Product> products) {
 		this.products = products;
 	}
+
+	public LocalDate getOrderDate() {
+		return orderDate;
+	}
+
+	public void setOrderDate(LocalDate orderDate) {
+		this.orderDate = orderDate;
+	}
+
+	@Override
+	public String toString() {
+		return "Orders [orderID=" + orderID + ", fName=" + fName + ", lName=" + lName + ", company=" + company
+				+ ", orderDate=" + orderDate + ", country=" + country + ", city=" + city + ", address=" + address
+				+ ", phone=" + phone + ", email=" + email + ", note=" + note + ", status=" + status + "]";
+	}
+	
+	
 }

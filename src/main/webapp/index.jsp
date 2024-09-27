@@ -39,7 +39,8 @@
 			<div class="opening-title">Best Quality Plants</div>
 			<div class="opening-adver">Amazing Variety Of Plants Starting
 				Just $6</div>
-			<button class="go-to-shop">SHOP NOW</button>
+				<button class="go-to-shop" >SHOP NOW</button>
+			
 		</div>
 	</div>
 

@@ -1,6 +1,7 @@
 package com.vanchuyen.controller;
 
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -48,11 +49,12 @@ public class SubmitOrderController extends HttpServlet {
 		String lName = request.getParameter("last-name");
 		String company = request.getParameter("com-name");
 		String country = request.getParameter("country");
-		String address = request.getParameter("address") + request.getParameter("optional-address");
+		String address = request.getParameter("address") +" "+ request.getParameter("optional-address");
 		String city = request.getParameter("town");
 		String phone = request.getParameter("phone");
 		String email = request.getParameter("email");
 		String note = request.getParameter("note");
+		LocalDate orderDate = LocalDate.now();
 		
 		//Get user
 		HttpSession session = request.getSession(false);
@@ -61,6 +63,11 @@ public class SubmitOrderController extends HttpServlet {
 		ProductDAO pd = new ProductDAO();
 		OrderDAO od = new OrderDAO();
 		OrderDetailDAO odd = new OrderDetailDAO();
+		
+		if(fName == null) {
+			response.sendRedirect("bills.jsp");
+			return;
+		}
 		
 		if(user != null) {
 			
@@ -74,7 +81,7 @@ public class SubmitOrderController extends HttpServlet {
 				setProducts.add(p);
 			});
 			
-			Orders newOrder = new Orders(fName, lName, company, country, city, address, phone, email, note, OrderStatus.WAIT.getDescription(), user, setProducts);
+			Orders newOrder = new Orders(fName, lName, company, country, city, address, phone, email, note, OrderStatus.WAIT.getDescription(), user, setProducts, orderDate);
 			
 			//Insert into database
 			String nextID = od.getOrderID();
@@ -93,8 +100,8 @@ public class SubmitOrderController extends HttpServlet {
 				cd.delete(c);
 			});
 			
-			response.sendRedirect("home");
 			
+			response.sendRedirect("bills.jsp");
 		} else {
 			response.sendRedirect("login");
 		}

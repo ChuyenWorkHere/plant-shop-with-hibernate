@@ -8,6 +8,7 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import com.vanchuyen.model.Orders;
+import com.vanchuyen.model.Users;
 import com.vanchuyen.util.HibernateUtil;
 
 public class OrderDAO implements DAOInterface<Orders, String> {
@@ -60,6 +61,27 @@ public class OrderDAO implements DAOInterface<Orders, String> {
 		return order;
 	}
 
+	public List<Orders> selectByUserId(Users u) {
+		try {
+			session = HibernateUtil.getSessionFactory().openSession();
+			transaction = session.beginTransaction();
+
+			listOrders = session.createQuery("FROM Orders u WHERE u.user = :user").setParameter("user", u)
+					.getResultList();
+			transaction.commit();
+		} catch (Exception e) {
+			if (transaction != null) {
+				transaction.rollback();
+			}
+			e.printStackTrace();
+		} finally {
+			if (session != null) {
+				session.close();
+			}
+		}
+		return listOrders;
+	}
+	
 	@Override
 	public int insert(Orders t) {
 		try {
