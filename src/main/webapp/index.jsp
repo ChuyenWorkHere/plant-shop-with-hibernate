@@ -50,6 +50,7 @@
 	<!--Notification -->
 	<jsp:include page="common/notification.jsp"></jsp:include>
 
+	<!-- Small comment -->
 	<!--Offer for customer part-->
 	<div class="offers-container">
 		<div class="offer">
