@@ -141,8 +141,9 @@
 						</c:if>
 					</button>
 					<div class="option-container">
-						<a id="user-profile-link" href="account">My account</a> <a
-							id="log-link" href='<c:url value = '/logout'></c:url>'>Logout</a>
+						<a id="user-profile-link" href="account">My account</a>
+						 <a id="user-profile-link" href="bills.jsp">My orders</a>
+						 <a id="log-link" href='<c:url value = '/logout'></c:url>'>Logout</a>
 					</div>
 				</c:if>
 				<c:if test="${sessionScope.user eq null}">

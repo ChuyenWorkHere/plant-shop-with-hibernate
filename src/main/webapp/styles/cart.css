@@ -262,14 +262,21 @@ td .title {
 .cart-checkout .price:last-child {
     font-size: 1em;
 }
-.cart-checkout button {
+.cart-checkout a {
     margin-top: 2rem;
     font-family: inherit;
     font-size: .9em;
+	color: white;
     padding: 1.3em 1.5em;
     font-weight: 600;
     border-radius: 2.3em;
-    width: 100%;
+	text-decoration: none;
+	background-color: #FC5F5F;
+	display: block;
+	text-align: center;
+}
+.cart-checkout a:hover {
+	background-color: #75C32C;
 }
     /* || Table Responsive */
 .cart-table-responsive a.remove-plant {
@@ -414,10 +421,11 @@ td .title {
     }
     .coupon-code .apply-button {
         font-family: inherit;
-        font-size: .7em;
+        font-size: .8em;
         padding: 1em 1em;
         font-weight: 600;
         border-radius: 2.3em;
+        text-align: center;
     }
     .cart-checkout {
         margin-top: 2rem;

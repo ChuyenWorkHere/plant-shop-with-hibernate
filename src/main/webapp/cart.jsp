@@ -222,7 +222,7 @@
 								</tr>
 							</tbody>
 						</table>
-						<button>PROCEED TO CHECKOUT</button>
+						<a href="checkout">PROCEED TO CHECKOUT</a>
 					</td>
 				</tr>
 			</table>

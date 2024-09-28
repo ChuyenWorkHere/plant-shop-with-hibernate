@@ -8,6 +8,11 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #FFFFFF;
 }
+
+.navigate-link-part {
+	z-index: 1;
+}
+
 /* || Header */
 @media (min-width: 973px) {
     .header-container {
